@@ -1,0 +1,30 @@
+{
+  "name": "student-marks-calculator",
+  "version": "1.0.0",
+  "description": "A beginner-friendly web app to calculate student total marks, percentage, and grade for 5 subjects.",
+  "main": "index.html",
+  "keywords": [
+    "student",
+    "marks",
+    "calculator",
+    "grade",
+    "percentage",
+    "html",
+    "css",
+    "javascript",
+    "beginner"
+  ],
+  "author": "",
+  "license": "MIT",
+  "scripts": {
+    "start": "open index.html"
+  },
+  "homepage": "https://github.com/your-username/student-marks-calculator#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/student-marks-calculator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/student-marks-calculator/issues"
+  }
+}

@@ -1,0 +1,238 @@
+/* ============================================================
+   Student Marks Calculator — Stylesheet
+   ============================================================ */
+
+/* ---------- Reset & Base ---------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  background-color: #eef2f7;
+  color: #1f2937;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+/* ---------- Card ---------- */
+.card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.09);
+  width: 100%;
+  max-width: 480px;
+  padding: 36px 32px 32px;
+}
+
+/* ---------- Header ---------- */
+.card-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.card-header h1 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1e3a5f;
+}
+
+.card-header p {
+  font-size: 13px;
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+/* ---------- Section Label ---------- */
+.section-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #6b7280;
+  margin-bottom: 12px;
+}
+
+/* ---------- Form Fields ---------- */
+.field {
+  margin-bottom: 14px;
+}
+
+label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1.5px solid #d1d5db;
+  border-radius: 7px;
+  font-size: 14px;
+  color: #1f2937;
+  background: #f9fafb;
+  outline: none;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+  border-color: #3b82f6;
+  background: #ffffff;
+}
+
+/* Remove number input spinner arrows */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* ---------- Divider ---------- */
+.divider {
+  border: none;
+  border-top: 1.5px solid #e5e7eb;
+  margin: 20px 0 18px;
+}
+
+/* ---------- Subjects Grid ---------- */
+.subjects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px 16px;
+}
+
+.subjects-grid .full-width {
+  grid-column: span 2;
+}
+
+/* ---------- Error Message ---------- */
+.error-msg {
+  font-size: 13px;
+  color: #dc2626;
+  margin-top: 2px;
+  margin-bottom: 4px;
+  min-height: 20px;
+}
+
+/* ---------- Buttons ---------- */
+.btn-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+button {
+  flex: 1;
+  padding: 11px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: background 0.18s, transform 0.1s;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+.btn-primary {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background: #1d4ed8;
+}
+
+.btn-secondary {
+  background: #f3f4f6;
+  color: #374151;
+  border: 1.5px solid #d1d5db;
+}
+
+.btn-secondary:hover {
+  background: #e5e7eb;
+}
+
+/* ---------- Result Box ---------- */
+.result-box {
+  display: none;
+  margin-top: 24px;
+  background: #f0f7ff;
+  border: 1.5px solid #bfdbfe;
+  border-radius: 10px;
+  padding: 20px 22px;
+}
+
+.result-box h2 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1e3a5f;
+  margin-bottom: 14px;
+  text-align: center;
+}
+
+.result-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px 0;
+  border-bottom: 1px solid #dbeafe;
+  font-size: 14px;
+  color: #374151;
+}
+
+.result-row:last-child {
+  border-bottom: none;
+}
+
+.result-val {
+  font-weight: 700;
+  color: #1e40af;
+}
+
+/* ---------- Grade Badge ---------- */
+.grade-badge {
+  display: inline-block;
+  padding: 2px 14px;
+  border-radius: 20px;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+}
+
+.grade-aplus { background: #d1fae5; color: #065f46; }
+.grade-a     { background: #d1fae5; color: #065f46; }
+.grade-b     { background: #dbeafe; color: #1e40af; }
+.grade-c     { background: #fef9c3; color: #854d0e; }
+.grade-d     { background: #ffedd5; color: #9a3412; }
+.grade-f     { background: #fee2e2; color: #991b1b; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 420px) {
+  .card {
+    padding: 28px 18px 24px;
+  }
+
+  .subjects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .subjects-grid .full-width {
+    grid-column: span 1;
+  }
+}
